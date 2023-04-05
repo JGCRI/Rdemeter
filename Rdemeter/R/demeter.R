@@ -12,14 +12,14 @@ run_demeter_R <- function(path_to_python= "C:/Projects/demeter_dev/demeter/venv/
   print("Demeter run successfully completed in R!")
 
   }
+
+
 port_model_to_R <- function(path_to_python= "C:/Projects/demeter_dev/demeter/venv/Scripts/python.exe",
                             model_name="demeter"){
 
   Sys.setenv(RETICULATE_PYTHON = path_to_python)
   print("Setup complete for env")
-  model <- reticulate::import("demeter")
+  model <- reticulate::import(model_name)
 
   return(model)
-
-
-  }
+}
